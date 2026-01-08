@@ -1,7 +1,10 @@
 #!/bin/bash
 
-sudo pacman -S --noconfirm git
+sudo pacman -S --noconfirm git rsync
 cd ~
+ssh-keygen
+ssh-copy-id jeff@10.0.0.17
+rsync -avz jeff@10.0.0.17/volume1/jeff-old
 git clone https://github.com/end-4/dots-hyprland.git
 cd dots-hyprland
 ./setup.sh install
