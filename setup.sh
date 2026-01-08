@@ -8,7 +8,8 @@ ssh-copy-id jeff@10.0.0.17
 rsync -avz jeff@10.0.0.17:/volume1/jeff-old $HOMEDIR
 git clone https://github.com/end-4/dots-hyprland.git
 cd dots-hyprland
-./setup.sh install
+./setup install
+cd ..
 
 sudo pacman -S --noconfirm zsh zoxide btrfs-assistant podman-compose obsidian neovim tmux fzf npm nextcloud-client
 
