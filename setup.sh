@@ -36,6 +36,7 @@ tmux source-file "$(realpath ~/.tmux.conf)"
 # Other Files to copy
 copyPath "Pictures"
 copyPath "Nextcloud"
+copyPath "vaults"
 
 # Configure hypr
 nvim ~/.config/hypr/hypridle.conf
