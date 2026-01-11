@@ -11,7 +11,9 @@ cd dots-hyprland
 ./setup install
 cd ..
 
-sudo pacman -S --noconfirm zsh zoxide btrfs-assistant podman-compose obsidian neovim tmux fzf npm nextcloud-client
+sudo pacman -S --noconfirm zsh zoxide btrfs-assistant podman-compose obsidian neovim tmux fzf npm nextcloud-client gdisk less btop
+
+flatpak install jellyfin app.zen_browser.zen
 
 chsh -s /bin/zsh
 copyPath () {
@@ -31,7 +33,7 @@ copyPath ".zshrc"
 copyPath ".tmux.conf"
 rm -rf ~/.tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-tmux source-file "$(realpath ~/.tmux.conf)"
+tmux new tmux source-file "$(realpath ~/.tmux.conf)"
 
 # Other Files to copy
 copyPath "Pictures"
